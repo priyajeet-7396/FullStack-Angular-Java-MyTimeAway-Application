@@ -1,0 +1,61 @@
+<div class="container">
+    <h1>Employee Update Form</h1>
+    <form [formGroup]="empForm" (ngSubmit)="onSubmit()">
+      <table class="table">
+        <tr>
+          <td><label for="id">Id</label></td>
+          <td><input readonly class="form-control" id="id" formControlName="id" type="number"></td>
+        </tr>
+        <tr>
+          <td><label for="employeeId">Employee ID</label></td>
+          <td><input class="form-control" id="employeeId" formControlName="employeeId" type="text"></td>
+        </tr>
+        <tr>
+          <td><label for="employeeName">Employee Name</label></td>
+          <td><input class="form-control" id="employeeName" formControlName="employeeName" type="text"></td>
+        </tr>
+        <tr>
+          <td><label for="employeePhone">Employee Phone</label></td>
+          <td><input class="form-control" id="employeePhone" formControlName="employeePhone" type="text"></td>
+        </tr>
+        <tr>
+          <td><label for="employeeEmail">Employee Email</label></td>
+          <td><input class="form-control" id="employeeEmail" formControlName="employeeEmail" type="email"></td>
+        </tr>
+        <tr>
+          <td><label for="managerEmail">Manager Email</label></td>
+          <td><input class="form-control" id="managerEmail" formControlName="managerEmail" type="text"></td>
+        </tr>
+        <tr>
+          <td><label for="fromDate">From Date</label></td>
+          <td><input class="form-control" id="fromDate" formControlName="fromDate" type="date"></td>
+        </tr>
+        <tr>
+          <td><label for="toDate">To Date</label></td>
+          <td><input class="form-control" id="toDate" formControlName="toDate" type="date"></td>
+        </tr>
+        <tr>
+          <td><label for="totalDays">Total Days</label></td>
+          <td><input class="form-control" id="totalDays" formControlName="totalDays" type="number"></td>
+        </tr>
+        <tr>
+          <td><label for="reason">Reason</label></td>
+          <td><input class="form-control" id="reason" formControlName="reason" type="text"></td>
+        </tr>
+        <tr>
+          <td><label for="status">Status</label></td>
+          <td><input class="form-control" id="status" formControlName="status" type="text" readonly></td>
+        </tr>
+        <!-- <tr>
+          <td><label for="isProcessed">Is Processed</label></td>
+          <td><input class="form-control" id="isProcessed" formControlName="isProcessed" type="checkbox"></td>
+        </tr> -->
+        <tr>
+          <td colspan="2">
+            <button type="submit" class="btn btn-warning">UPDATE</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  

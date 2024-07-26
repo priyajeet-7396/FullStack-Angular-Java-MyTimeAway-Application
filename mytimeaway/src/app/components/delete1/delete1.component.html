@@ -1,0 +1,59 @@
+<div>
+    <h1 style="color: rgb(202, 126, 75);">Delete Employee</h1>
+    <div *ngIf="emp">
+    <table class="table table-striped table-bordered">
+        <tr>
+            <td>Employee ID</td>
+            <td>{{ emp.id }}</td>
+        </tr>
+        <tr>
+            <td>Employee ID</td>
+            <td>{{ emp.employeeId }}</td>
+        </tr>
+        <tr>
+            <td>Employee Name</td>
+            <td>{{ emp.employeeName }}</td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td>{{ emp.employeePhone }}</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>{{ emp.employeeEmail }}</td>
+        </tr>
+        <tr>
+            <td>Manager</td>
+            <td>{{ emp.managerEmail }}</td>
+        </tr>
+        <tr>
+            <td>From Date</td>
+            <td>{{ emp.fromDate | date : 'yyyy-MM-dd' }}</td>
+        </tr>
+        <tr>
+            <td>To Date</td>
+            <td>{{ emp.toDate | date : 'yyyy-MM-dd' }}</td>
+        </tr>
+        <tr>
+            <td>Total Days</td>
+            <td>{{ emp.totalDays }}</td>
+        </tr>
+        <tr>
+            <td>Reason</td>
+            <td>{{ emp.reason }}</td>
+        </tr>
+        <tr>
+            <td>Status</td>
+            <td>{{ emp.status }}</td>
+        </tr>
+        <tr>
+            <td>Is Processed</td>
+            <td>{{ emp.isProcessed }}</td>
+        </tr>
+        <tr><td><br></td></tr>
+        <td>
+            <button class="btn btn-danger" (click)="delete(emp.id)">Confirm Deletion</button>
+        </td>
+    </table>
+</div>
+</div>

@@ -1,0 +1,36 @@
+<p>List of pending Leave Applications</p>
+<table class="table table-danger">
+  <thead>
+    <tr>
+   
+      <th>Employee ID</th>
+      <th>Employee Name</th>
+      <th>Employee Phone</th>
+      <th>Employee Email</th>
+      <th>Manager Email</th>
+      <th>From Date</th>
+      <th>To Date</th>
+      <th>Total Days</th>
+      <th>Reason</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of empList">
+        <ng-container *ngIf="emp.status === 'CANCELED'">
+    
+      <td>{{ emp.employeeId }}</td>
+      <td>{{ emp.employeeName }}</td>
+      <td>{{ emp.employeePhone }}</td>
+      <td>{{ emp.employeeEmail }}</td>
+      <td>{{ emp.managerEmail }}</td>
+      <td>{{ emp.fromDate | date:'yyyy-MM-dd' }}</td>
+      <td>{{ emp.toDate | date:'yyyy-MM-dd' }}</td>
+      <td>{{ emp.totalDays }}</td>
+      <td>{{ emp.reason }}</td>
+      <td>{{ emp.status }}</td>
+    
+    </ng-container>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,33 @@
+<p>List of Leave Applications</p>
+<table class="table table-info">
+  <thead>
+    <tr>
+   
+      <th>Employee ID</th>
+      <th>Employee Name</th>
+      <th>Employee Phone</th>
+      <th>Employee Email</th>
+      <th>Manager Email</th>
+      <th>From Date</th>
+      <th>To Date</th>
+      <th>Total Days</th>
+      <th>Reason</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let application of empList">
+    
+      <td>{{ application.employeeId }}</td>
+      <td>{{ application.employeeName }}</td>
+      <td>{{ application.employeePhone }}</td>
+      <td>{{ application.employeeEmail }}</td>
+      <td>{{ application.managerEmail }}</td>
+      <td>{{ application.fromDate | date:'yyyy-MM-dd' }}</td>
+      <td>{{ application.toDate | date:'yyyy-MM-dd' }}</td>
+      <td>{{ application.totalDays }}</td>
+      <td>{{ application.reason }}</td>
+      <td>{{ application.status }}</td>
+    </tr>
+  </tbody>
+</table>

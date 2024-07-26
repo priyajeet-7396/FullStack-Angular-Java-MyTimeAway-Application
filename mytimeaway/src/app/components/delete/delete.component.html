@@ -1,0 +1,37 @@
+<p>Delete Leave Applications</p>
+<table class="table  table-danger">
+  <thead class="thead-dark">
+    <tr>
+   
+      <th>Employee ID</th>
+      <th>Employee Name</th>
+      <th>Employee Phone</th>
+      <th>Employee Email</th>
+      <th>Manager Email</th>
+      <th>From Date</th>
+      <th>To Date</th>
+      <th>Total Days</th>
+      <th>Reason</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let application of empList">
+    
+      <td>{{ application.employeeId }}</td>
+      <td>{{ application.employeeName }}</td>
+      <td>{{ application.employeePhone }}</td>
+      <td>{{ application.employeeEmail }}</td>
+      <td>{{ application.managerEmail }}</td>
+      <td>{{ application.fromDate | date:'yyyy-MM-dd' }}</td>
+      <td>{{ application.toDate | date:'yyyy-MM-dd' }}</td>
+      <td>{{ application.totalDays }}</td>
+      <td>{{ application.reason }}</td>
+      <td>{{ application.status }}</td>
+      <td>
+        <button class="btn btn-outline-danger" (click)="delete(application.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
